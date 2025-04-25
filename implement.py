@@ -4,8 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy import stats
 
-# # --------------------------------------------
-# # Objective 1: Exploratory data analysis
+# = Objective 1: Exploratory data analysis
 
 # #Load the dataset
 df = pd.read_excel("Proj_data.xlsx")

@@ -61,13 +61,11 @@ outliers_totalcharges = df_clean[(df_clean['TotalCharges'] < q1 - 1.5 * iqr) | (
 # print(f"TotalCharges Outliers: {len(outliers_totalcharges)} rows detected")
 
 # Objective 3: Service Adoption and Bundling Opportunities using plots
-
 services = ['OnlineSecurity', 'OnlineBackup', 'TechSupport', 'StreamingTV', 'StreamingMovies']
 adoption_rates = {}
 for service in services:
     counts = df_clean[service].value_counts(normalize=True) * 100
     adoption_rates[service] = counts.get("Yes", 0)
-
 # print("Service Adoption Rates (in %):")
 # print(adoption_rates)
 
@@ -80,7 +78,7 @@ plt.ylim(0, 100)
 plt.tight_layout()
 plt.show()
 
-# --------------------------------------------
+
 # Objective 4: Payment Method Preferences and Billing Differences 
 
 payment_counts = df_clean['PaymentMethod'].value_counts()

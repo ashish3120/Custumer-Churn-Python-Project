@@ -10,7 +10,7 @@ from scipy import stats
 # #Load the dataset
 df = pd.read_excel("Proj_data.xlsx")
 
-# # Basic structure and types
+# Basic structure and types
 # print("Dataset Info:")
 # print(df.info())
 

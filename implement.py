@@ -27,7 +27,7 @@ df_clean['MonthlyCharges'] = pd.to_numeric(df_clean['MonthlyCharges'], errors='c
 total_missing = df_clean.isnull().sum().sum()
 # print(f"Total Missing Values in Cleaned Dataset: {total_missing}")
 
-# # --------------------------------------------
+
 # Objective 2: Tenure and Revenue Analysis using plots
 
 # Correlation between tenure and total charges

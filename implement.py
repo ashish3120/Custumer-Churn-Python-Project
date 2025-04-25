@@ -60,7 +60,6 @@ iqr = q3 - q1
 outliers_totalcharges = df_clean[(df_clean['TotalCharges'] < q1 - 1.5 * iqr) | (df_clean['TotalCharges'] > q3 + 1.5 * iqr)]
 # print(f"TotalCharges Outliers: {len(outliers_totalcharges)} rows detected")
 
-# --------------------------------------------
 # Objective 3: Service Adoption and Bundling Opportunities using plots
 
 services = ['OnlineSecurity', 'OnlineBackup', 'TechSupport', 'StreamingTV', 'StreamingMovies']

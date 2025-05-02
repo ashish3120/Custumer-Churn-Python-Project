@@ -96,11 +96,6 @@ plt.xticks(rotation=45)
 plt.tight_layout()
 plt.show()
 
-# ANOVA test for MonthlyCharges across Payment Methods
-anova_result = stats.f_oneway(*[group['MonthlyCharges'].dropna().values for name, group in df_clean.groupby('PaymentMethod')])
-print("ANOVA test on MonthlyCharges by PaymentMethod:")
-print(f"F-statistic: {anova_result.statistic:.2f}, p-value: {anova_result.pvalue:.4f}")
-
 # Boxplot to visualize outliers in MonthlyCharges across Payment Methods
 plt.figure(figsize=(10, 6))
 sns.boxplot(x='PaymentMethod', y='MonthlyCharges', data=df_clean)

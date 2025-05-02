@@ -10,12 +10,12 @@ from scipy import stats
 df = pd.read_excel("Proj_data.xlsx")
 
 # Basic structure and types
-# print("Dataset Info:")
-# print(df.info())
+print("Dataset Info:")
+print(df.info())
 
-# # Summary statistics for all numerical columns
-# print("\nSummary Statistics:")
-# print(df.describe())
+# Summary statistics for all numerical columns
+print("\nSummary Statistics:")
+print(df.describe())
 
 # #Convert TotalCharges to numeric and handle missing data
 df['TotalCharges'] = pd.to_numeric(df['TotalCharges'], errors='coerce')
@@ -32,12 +32,12 @@ total_missing = df_clean.isnull().sum().sum()
 
 # Correlation between tenure and total charges
 tenure_totalcharges_corr = df_clean[['tenure', 'TotalCharges']].corr().iloc[0,1]
-# print(f"Correlation between tenure and TotalCharges: {tenure_totalcharges_corr:.2f}")
+print(f"Correlation between tenure and TotalCharges: {tenure_totalcharges_corr:.2f}")
 
 # Summary statistics for tenure
 tenure_stats = df_clean['tenure'].describe()
-# print("Tenure Summary Statistics:")
-# print(tenure_stats)
+print("Tenure Summary Statistics:")
+print(tenure_stats)
 
 # Scatter plot with regression line
 plt.figure(figsize=(8, 6))
